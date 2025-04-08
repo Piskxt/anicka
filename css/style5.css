@@ -8,15 +8,17 @@ body {
 }
 
 .center-box {
-    height: 170px;
     width: 320px;
     background-color: pink;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards;
 }
@@ -31,8 +33,7 @@ body {
 }
 
 input, textarea {
-    width: 250px;
-    max-width: 400px;
+    width: 100%;
     padding: 12px;
     font-size: 16px;
     border: none;
@@ -41,47 +42,39 @@ input, textarea {
     backdrop-filter: blur(10px);
     color: white;
     outline: none;
-  }
-  
-  input::placeholder, textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  input:focus, textarea:focus {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
 }
 
-  .button {
-    position: absolute;
-    margin-top: 80px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    color: white;
-    outline: none;
-    box-shadow: 0 8 16 rgba(0, 0, 0, 0.2);
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
 
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+a.button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+a.button:hover {
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.3);
 }
 
-.button:hover {
-    color: rgba(255, 255, 255, 0.7);
+.hidden {
+    display: none;
 }
