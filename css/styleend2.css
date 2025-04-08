@@ -38,8 +38,7 @@ a {
 
 .button {
     width: 120px;
-    position: absolute;
-    top: 585px;
+    margin: 35px;
     font-size: 16px;
     border: none;
     border-radius: 10px;
